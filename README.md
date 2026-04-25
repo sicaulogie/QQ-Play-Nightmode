@@ -205,5 +205,9 @@ sudo tail -f /opt/homebrew/var/log/nginx/access.log
 ## 注意事项
 
 - 切换主题完成后建议立即关闭服务，避免长期影响手机网络
+```
+sudo /opt/homebrew/bin/nginx -s stop
+sudo kill $(pgrep dnsmasq)
+```
 - 本方案不收集任何数据，所有流量仅在局域网内转发
 - Nginx 启用了缓存（30天），同一主题包再次下载时直接从本地返回，无需重新联网
